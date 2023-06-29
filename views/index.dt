@@ -1,0 +1,42 @@
+- void css(string file)
+  link(rel= 'stylesheet', type='text/css', href='styles/#{file}.css')
+  script(src='js/scripts.js')
+
+doctype html
+html
+  head
+    title Feedback Aggregator for #{assignmentName}
+    - css("styles");
+  body
+    div#mainGrid
+      h1 Feedback Aggregator for #{assignmentName}
+      h2 Reviewees
+      div#reviewsLabel
+        h2 Reviews
+        button#copyToClipboard copy to clipboard
+      h2 Reviewers
+      ul#reviewees
+        - import std.conv : to;
+        - foreach(i, student; students)
+          -string this_id = "reviewee_" ~to!string(i);
+          li(id='#{this_id}' ) #{student["name"].get!string}
+
+      div#reviews
+        form#reviewForm
+          textarea#newReview(name="newReview")
+          input(type="submit", value="Submit Review")
+        div#reviewContainer
+
+      ul#reviewers
+        -if(instructor.length)
+          -string this_id = "reviewer_" ~to!string(instructor);
+          li(id='#{this_id}')
+            span(class='reviewerName') #{instructor}
+            span(class='reviewCount')
+
+        -import std.conv : to;
+        - foreach(i, student; students)
+          -string this_id = "reviewer_" ~to!string(i);
+          li(id='#{this_id}' )
+            span(class='reviewerName') #{student["name"].get!string}
+            span(class='reviewCount')

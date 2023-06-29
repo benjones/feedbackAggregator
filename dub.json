@@ -1,0 +1,16 @@
+{
+    "authors": [
+	"Ben Jones"
+    ],
+    "copyright": "Copyright © 2022, Ben Jones",
+    "dependencies": {
+	"vibe-d": {"path" : "/Users/ben/projects/dlang/vibe.d/"},
+        "vibe-d:tls": "*"
+    },
+    "subConfigurations": {
+	"vibe-d:tls": "openssl-static"
+    },
+    "description": "Aggregate review feedback on student projects",
+    "license": "proprietary",
+    "name": "feedbackaggregator"
+}

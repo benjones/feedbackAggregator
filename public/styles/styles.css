@@ -1,0 +1,88 @@
+h1, h2 {
+    color: red;
+    flex-grow: 0;
+}
+
+div {
+    border: 2px solid black;
+}
+
+#mainGrid{
+ display:grid;
+ grid-template-columns: 1fr 4fr 1fr;
+ grid-template-rows: 150px 100px 1fr;
+ height: 90vh;
+ border: solid green 1px;
+
+}
+h1 {
+   grid-column-start: 1;
+  grid-column-end: 4;
+  border: solid black 1px;
+}
+
+h2 {
+    border: solid red 1px;
+    flex-grow: 1;
+}
+
+
+
+ul {
+  overflow: scroll;
+  height: 80%;
+  border: solid	orange 2px;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+textarea {
+    width: 90%;
+    height: 200px;
+    border: solid cyan 1px;
+}
+
+form {
+    width: 100%;
+}
+
+#currentReviewee, #currentReviewer{
+    border: solid magenta 2px;
+}
+
+.review {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.deleter {
+    flex-grow: 0;
+    color: white;
+    background-color: red;
+}
+
+.realDeleter {
+    flex-grow: 0;
+    color: white;
+    background-color: darkred;
+}
+
+.reviewText {
+    flex-grow: 1;
+}
+
+#reviewsLabel {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#copyToClipboard {
+    flex-grow: 0;
+}
+
+.reviewCount {
+    margin-left: 20px;
+}
