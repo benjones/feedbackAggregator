@@ -1,0 +1,21 @@
+{
+    "assignmentName" : "Demo Assignment",
+    "instructor" : "Ben Jones",
+    "roster" : [
+        {
+            "name" : "great student",
+            "uid" : "u0123456",
+            "role" : "Student"
+        },
+         {
+            "name" : "bad student",
+            "uid" : "u0123457",
+            "role" : "Student"
+         },
+         {
+            "name" : "medium student",
+            "uid" : "u0123458",
+            "role" : "Student"
+        }
+    ]
+}
